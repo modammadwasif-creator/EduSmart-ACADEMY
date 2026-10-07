@@ -1,0 +1,2337 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduSmart | Admin Panel</title>
+
+    <meta
+        name="description"
+        content="EduSmart School Management System - Professional Administration Panel"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- SAME CSS FILE -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+
+<!-- =====================================================
+     MOBILE OVERLAY
+===================================================== -->
+
+<div
+    class="admin-mobile-overlay"
+    id="adminMobileOverlay"
+></div>
+
+
+<!-- =====================================================
+     LOGIN SCREEN
+===================================================== -->
+
+<section
+    class="admin-login-screen"
+    id="loginScreen"
+>
+
+    <div class="admin-login-wrapper">
+
+        <div class="admin-login-brand">
+
+            <div class="admin-brand-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+                <h1>EduSmart</h1>
+                <p>Smart School Management</p>
+            </div>
+
+        </div>
+
+
+        <div class="admin-login-card">
+
+            <div class="admin-login-heading">
+
+                <span class="admin-eyebrow">
+                    ADMINISTRATION
+                </span>
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Sign in to manage your school.
+                </p>
+
+            </div>
+
+
+            <form id="loginForm">
+
+                <div class="admin-form-group">
+
+                    <label for="username">
+                        Username
+                    </label>
+
+                    <div class="admin-input-icon">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter username"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <div class="admin-input-icon">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            id="passwordToggle"
+                            class="admin-password-toggle"
+                            aria-label="Show password"
+                        >
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <p
+                    class="admin-login-error"
+                    id="loginError"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    class="admin-login-button"
+                >
+
+                    <span>
+                        Sign In
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div class="admin-login-footer">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Main Website
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <p class="admin-login-copyright">
+            © 2026 EduSmart. School Management System.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADMIN DASHBOARD
+===================================================== -->
+
+<div
+    class="admin-dashboard"
+    id="dashboard"
+    style="display:none;"
+>
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside
+        class="admin-sidebar"
+        id="sidebar"
+    >
+
+        <div class="admin-sidebar-brand">
+
+            <div class="admin-sidebar-logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+
+            <div>
+
+                <strong>
+                    EduSmart
+                </strong>
+
+                <span>
+                    School Management
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="admin-sidebar-profile">
+
+            <div class="admin-profile-avatar">
+                A
+            </div>
+
+            <div>
+
+                <strong>
+                    Administrator
+                </strong>
+
+                <span>
+                    Super Admin
+                </span>
+
+            </div>
+
+            <span class="admin-online-dot"></span>
+
+        </div>
+
+
+        <nav class="admin-sidebar-nav">
+
+            <p class="admin-nav-label">
+                MAIN
+            </p>
+
+
+            <button
+                type="button"
+                class="admin-nav-item active"
+                data-admin-section="dashboardHome"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="studentsSection"
+            >
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <span>
+                    Students
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="admissionsSection"
+            >
+
+                <i class="fa-solid fa-file-signature"></i>
+
+                <span>
+                    Admissions
+                </span>
+
+                <b id="admissionBadge">
+                    0
+                </b>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="teachersSection"
+            >
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                <span>
+                    Teachers
+                </span>
+
+            </button>
+
+
+            <p class="admin-nav-label">
+                ACADEMICS
+            </p>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="attendanceSection"
+            >
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                <span>
+                    Attendance
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="resultsSection"
+            >
+
+                <i class="fa-solid fa-square-poll-vertical"></i>
+
+                <span>
+                    Results & Marks
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="timetableSection"
+            >
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                <span>
+                    Timetable
+                </span>
+
+            </button>
+
+
+            <p class="admin-nav-label">
+                COMMUNICATION
+            </p>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="noticesSection"
+            >
+
+                <i class="fa-solid fa-bullhorn"></i>
+
+                <span>
+                    Notices
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="messagesSection"
+            >
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <span>
+                    Messages
+                </span>
+
+                <b id="messageBadge">
+                    0
+                </b>
+
+            </button>
+
+
+            <p class="admin-nav-label">
+                SERVICES
+            </p>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="idCardsSection"
+            >
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <span>
+                    Student ID Cards
+                </span>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="admin-nav-item"
+                data-admin-section="settingsSection"
+            >
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+            </button>
+
+        </nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <a
+                href="index.html"
+                class="admin-sidebar-website"
+            >
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span>
+                    Main Website
+                </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="admin-logout-button"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =================================================
+         MAIN AREA
+    ================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- HEADER -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button
+                    type="button"
+                    id="mobileMenu"
+                    class="admin-mobile-menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div>
+
+                    <h1 id="adminPageTitle">
+                        Dashboard
+                    </h1>
+
+                    <p id="adminPageSubtitle">
+                        Welcome back, Administrator
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-right">
+
+                <a
+                    href="index.html"
+                    class="admin-view-site"
+                    title="Open Main Website"
+                >
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span>
+                        View Website
+                    </span>
+
+                </a>
+
+
+                <div class="admin-topbar-date">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <span id="adminCurrentDate">
+                        Today
+                    </span>
+
+                </div>
+
+
+                <div class="admin-topbar-user">
+
+                    <div class="admin-top-avatar">
+                        A
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <div class="admin-content">
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <section
+                class="admin-section active"
+                id="dashboardHome"
+            >
+
+                <div class="admin-welcome-card">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            SCHOOL OVERVIEW
+                        </span>
+
+                        <h2>
+                            Good evening, Administrator
+                        </h2>
+
+                        <p>
+                            Manage students, admissions,
+                            academics and school communication
+                            from one place.
+                        </p>
+
+                    </div>
+
+                    <div class="admin-welcome-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="admin-stat-grid">
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon students">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Total Students
+                            </span>
+
+                            <strong id="totalStudents">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon admissions">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Admissions
+                            </span>
+
+                            <strong id="totalAdmissions">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon teachers">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Teachers
+                            </span>
+
+                            <strong id="totalTeachers">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon classes">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Classes
+                            </span>
+
+                            <strong id="totalClasses">
+                                13
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <h2>
+                            Quick Actions
+                        </h2>
+
+                        <p>
+                            Frequently used school management tools.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-quick-grid">
+
+                    <button
+                        type="button"
+                        class="admin-quick-card"
+                        data-admin-section="studentsSection"
+                    >
+
+                        <div class="admin-quick-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Manage Students
+                            </strong>
+
+                            <span>
+                                Add and update student records
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-quick-card"
+                        data-admin-section="admissionsSection"
+                    >
+
+                        <div class="admin-quick-icon">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Review Admissions
+                            </strong>
+
+                            <span>
+                                Check online applications
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-quick-card"
+                        data-admin-section="attendanceSection"
+                    >
+
+                        <div class="admin-quick-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Mark Attendance
+                            </strong>
+
+                            <span>
+                                Track daily attendance
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="admin-quick-card"
+                        data-admin-section="noticesSection"
+                    >
+
+                        <div class="admin-quick-icon">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Publish Notice
+                            </strong>
+
+                            <span>
+                                Share school announcements
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- RECENT STUDENTS -->
+
+                <div class="admin-dashboard-two-column">
+
+                    <div class="admin-panel-card">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Recent Students
+                                </h2>
+
+                                <p>
+                                    Latest student records
+                                </p>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                class="admin-text-button"
+                                data-admin-section="studentsSection"
+                            >
+                                View All
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="admin-recent-students"
+                            id="recentStudents"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="admin-panel-card">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+
+                                <h2>
+                                    School Summary
+                                </h2>
+
+                                <p>
+                                    Current system overview
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-summary-list">
+
+                            <div>
+
+                                <span>
+                                    Active Students
+                                </span>
+
+                                <strong id="activeStudents">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Published Results
+                                </span>
+
+                                <strong id="publishedResults">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Attendance Records
+                                </span>
+
+                                <strong id="attendanceTotal">
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    Average Result
+                                </span>
+
+                                <strong id="averageResult">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 STUDENTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="studentsSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            STUDENT MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Students
+                        </h2>
+
+                        <p>
+                            Manage complete student records.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="addStudentBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Student
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-filter-bar">
+
+                    <div class="admin-search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="studentSearch"
+                            placeholder="Search student, father name or ID..."
+                        >
+
+                    </div>
+
+
+                    <select
+                        id="classFilter"
+                        class="admin-select"
+                    >
+
+                        <option value="">
+                            All Classes
+                        </option>
+
+                        <option>Play Group</option>
+                        <option>ECED I</option>
+                        <option>ECED II</option>
+                        <option>Class 1</option>
+                        <option>Class 2</option>
+                        <option>Class 3</option>
+                        <option>Class 4</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                        <option>Class 9</option>
+                        <option>Class 10</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-table-card">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Student
+                                    </th>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        Father Name
+                                    </th>
+
+                                    <th>
+                                        Class
+                                    </th>
+
+                                    <th>
+                                        Phone
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Actions
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="studentsTableBody">
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        class="admin-empty-state"
+                        id="emptyStudents"
+                        style="display:none;"
+                    >
+
+                        <div>
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <h3>
+                            No Students Found
+                        </h3>
+
+                        <p>
+                            Add your first student to begin.
+                        </p>
+
+                        <button
+                            type="button"
+                            class="admin-primary-button"
+                            id="emptyAddStudentBtn"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Add Student
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ADMISSIONS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="admissionsSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            ONLINE ADMISSIONS
+                        </span>
+
+                        <h2>
+                            Admission Applications
+                        </h2>
+
+                        <p>
+                            Review and process applications submitted
+                            through the school website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-mini-stat-grid">
+
+                    <div class="admin-mini-stat">
+                        <span>Total</span>
+                        <strong id="admissionTotal">0</strong>
+                    </div>
+
+                    <div class="admin-mini-stat">
+                        <span>Pending</span>
+                        <strong id="admissionPending">0</strong>
+                    </div>
+
+                    <div class="admin-mini-stat">
+                        <span>Approved</span>
+                        <strong id="admissionApproved">0</strong>
+                    </div>
+
+                    <div class="admin-mini-stat">
+                        <span>Rejected</span>
+                        <strong id="admissionRejected">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-card">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Applicant
+                                    </th>
+
+                                    <th>
+                                        Father / Guardian
+                                    </th>
+
+                                    <th>
+                                        Class
+                                    </th>
+
+                                    <th>
+                                        Contact
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody
+                                id="admissionsTableBody"
+                            ></tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        class="admin-empty-state"
+                        id="emptyAdmissions"
+                    >
+
+                        <div>
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+
+                        <h3>
+                            No Admission Applications
+                        </h3>
+
+                        <p>
+                            Online applications will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TEACHERS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="teachersSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            STAFF MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Teachers
+                        </h2>
+
+                        <p>
+                            Manage your school's teaching staff.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="addTeacherBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Teacher
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-teacher-grid"
+                    id="teachersGrid"
+                ></div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ATTENDANCE
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="attendanceSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            DAILY ATTENDANCE
+                        </span>
+
+                        <h2>
+                            Attendance
+                        </h2>
+
+                        <p>
+                            Mark and manage student attendance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-attendance-controls">
+
+                    <div class="admin-form-group">
+
+                        <label>
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="attendanceDate"
+                            class="admin-control-input"
+                        >
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label>
+                            Class
+                        </label>
+
+                        <select
+                            id="attendanceClass"
+                            class="admin-control-input"
+                        >
+
+                            <option value="">
+                                Select Class
+                            </option>
+
+                            <option>Play Group</option>
+                            <option>ECED I</option>
+                            <option>ECED II</option>
+                            <option>Class 1</option>
+                            <option>Class 2</option>
+                            <option>Class 3</option>
+                            <option>Class 4</option>
+                            <option>Class 5</option>
+                            <option>Class 6</option>
+                            <option>Class 7</option>
+                            <option>Class 8</option>
+                            <option>Class 9</option>
+                            <option>Class 10</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-attendance-summary">
+
+                    <div>
+                        <span>Present</span>
+                        <strong id="presentCount">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Absent</span>
+                        <strong id="absentCount">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Late</span>
+                        <strong id="lateCount">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Total</span>
+                        <strong id="attendanceTotal">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-attendance-list"
+                    id="attendanceList"
+                >
+
+                    <div class="admin-empty-mini">
+
+                        <i class="fa-solid fa-calendar-check"></i>
+
+                        <p>
+                            Select a class to mark attendance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RESULTS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="resultsSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            ACADEMIC PERFORMANCE
+                        </span>
+
+                        <h2>
+                            Results & Marks
+                        </h2>
+
+                        <p>
+                            Manage examination results and marks.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="addResultBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Result
+
+                    </button>
+
+                </div>
+
+
+                <div class="admin-mini-stat-grid">
+
+                    <div class="admin-mini-stat">
+                        <span>Published Results</span>
+                        <strong id="publishedResults">0</strong>
+                    </div>
+
+                    <div class="admin-mini-stat">
+                        <span>Top Performers</span>
+                        <strong id="topPerformers">0</strong>
+                    </div>
+
+                    <div class="admin-mini-stat">
+                        <span>Average</span>
+                        <strong id="averageResult">0%</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-card">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Student</th>
+                                    <th>ID</th>
+                                    <th>Class</th>
+                                    <th>Exam</th>
+                                    <th>Marks</th>
+                                    <th>Grade</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody
+                                id="resultsTableBody"
+                            ></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TIMETABLE
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="timetableSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            CLASS SCHEDULE
+                        </span>
+
+                        <h2>
+                            Timetable
+                        </h2>
+
+                        <p>
+                            Manage daily class periods and teachers.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="addTimetableBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Add Period
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-timetable-grid"
+                    id="timetableGrid"
+                ></div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NOTICES
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="noticesSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            SCHOOL COMMUNICATION
+                        </span>
+
+                        <h2>
+                            Notices
+                        </h2>
+
+                        <p>
+                            Publish important school announcements.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="admin-primary-button"
+                        id="addNoticeBtn"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Publish Notice
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="admin-notices-grid"
+                    id="adminNoticesGrid"
+                ></div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MESSAGES
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="messagesSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            WEBSITE CONTACT
+                        </span>
+
+                        <h2>
+                            Messages
+                        </h2>
+
+                        <p>
+                            Messages received from the public website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-table-card">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody
+                                id="messagesTableBody"
+                            ></tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <div
+                        class="admin-empty-state"
+                        id="emptyMessages"
+                    >
+
+                        <div>
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+
+                        <h3>
+                            No Messages
+                        </h3>
+
+                        <p>
+                            Website contact messages will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ID CARDS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="idCardsSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            STUDENT IDENTIFICATION
+                        </span>
+
+                        <h2>
+                            Student ID Cards
+                        </h2>
+
+                        <p>
+                            Search students and prepare printable ID cards.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-filter-bar">
+
+                    <div class="admin-search-box">
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                        <input
+                            type="search"
+                            id="idCardSearch"
+                            placeholder="Search student name or ID..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="admin-id-card-results"
+                    id="idCardResults"
+                >
+
+                    <div class="admin-empty-state">
+
+                        <div>
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+
+                        <h3>
+                            Search Student
+                        </h3>
+
+                        <p>
+                            Enter a student name or ID to prepare an ID card.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                class="admin-section"
+                id="settingsSection"
+            >
+
+                <div class="admin-section-heading">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            SYSTEM
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                        <p>
+                            Manage EduSmart system settings and data.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-settings-grid">
+
+                    <div class="admin-settings-card">
+
+                        <div class="admin-settings-icon">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Export School Data
+                            </h3>
+
+                            <p>
+                                Download students, admissions,
+                                attendance, results and notices
+                                as a JSON backup.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="admin-outline-button"
+                                id="exportDataBtn"
+                            >
+
+                                <i class="fa-solid fa-download"></i>
+
+                                Export Data
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-settings-card danger">
+
+                        <div class="admin-settings-icon">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Reset Demo Data
+                            </h3>
+
+                            <p>
+                                Permanently remove all locally stored
+                                EduSmart demo records from this browser.
+                            </p>
+
+                            <button
+                                type="button"
+                                class="admin-danger-button"
+                                id="resetSystemBtn"
+                            >
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Reset Data
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-system-info">
+
+                    <div>
+
+                        <span>
+                            System
+                        </span>
+
+                        <strong>
+                            EduSmart School Management
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Version
+                        </span>
+
+                        <strong>
+                            1.0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Storage
+                        </span>
+
+                        <strong>
+                            Browser Local Storage
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     STUDENT MODAL
+===================================================== -->
+
+<div
+    class="admin-modal"
+    id="studentModal"
+>
+
+    <div class="admin-modal-overlay"></div>
+
+
+    <div class="admin-modal-box">
+
+        <div class="admin-modal-header">
+
+            <div>
+
+                <span class="admin-eyebrow">
+                    STUDENT RECORD
+                </span>
+
+                <h2 id="studentModalTitle">
+                    Add Student
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="admin-modal-close"
+                id="closeStudentModal"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <form id="studentForm">
+
+            <input
+                type="hidden"
+                id="editStudentId"
+            >
+
+
+            <div class="admin-modal-grid">
+
+                <div class="admin-form-group">
+
+                    <label for="studentName">
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="fatherName">
+                        Father Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fatherName"
+                        placeholder="Enter father name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="studentClass">
+                        Class
+                    </label>
+
+                    <select
+                        id="studentClass"
+                        required
+                    >
+
+                        <option value="">
+                            Select Class
+                        </option>
+
+                        <option>Play Group</option>
+                        <option>ECED I</option>
+                        <option>ECED II</option>
+                        <option>Class 1</option>
+                        <option>Class 2</option>
+                        <option>Class 3</option>
+                        <option>Class 4</option>
+                        <option>Class 5</option>
+                        <option>Class 6</option>
+                        <option>Class 7</option>
+                        <option>Class 8</option>
+                        <option>Class 9</option>
+                        <option>Class 10</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="studentPhone">
+                        Phone
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="03XX XXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="studentGender">
+                        Gender
+                    </label>
+
+                    <select id="studentGender">
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="studentStatus">
+                        Status
+                    </label>
+
+                    <select id="studentStatus">
+
+                        <option value="Active">
+                            Active
+                        </option>
+
+                        <option value="Inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-footer">
+
+                <button
+                    type="button"
+                    class="admin-secondary-button"
+                    id="cancelStudentBtn"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="admin-primary-button"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Save Student
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="admin-toast"
+    id="adminToast"
+>
+
+    <div class="admin-toast-icon">
+
+        <i class="fa-solid fa-check"></i>
+
+    </div>
+
+    <div>
+
+        <strong>
+            Success
+        </strong>
+
+        <p id="adminToastMessage">
+            Done successfully.
+        </p>
+
+    </div>
+
+</div>
+
+    <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                EduSmart helps schools manage students, admissions,
+                teachers, attendance, results, notices and academic
+                activities from one platform.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-shield-alt"></i>
+                Secure School Management
+            </div>
+        </div>
+
+        <!-- ADMIN -->
+        <div class="footer-column">
+            <h3>Admin</h3>
+
+            <a href="index.html">
+                <i class="fas fa-globe"></i> Main Website
+            </a>
+
+            <a href="admin.html">
+                <i class="fas fa-chart-line"></i> Dashboard
+            </a>
+
+            <a href="admission.html">
+                <i class="fas fa-user-plus"></i> Admissions
+            </a>
+
+            <a href="student.html">
+                <i class="fas fa-user-graduate"></i> Student Portal
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-chalkboard-teacher"></i> Teachers
+            </a>
+        </div>
+
+        <!-- SCHOOL -->
+        <div class="footer-column">
+            <h3>School</h3>
+
+            <a href="classes.html">
+                <i class="fas fa-book-open"></i> Classes
+            </a>
+
+            <a href="timetable.html">
+                <i class="fas fa-calendar-alt"></i> Timetable
+            </a>
+
+            <a href="result.html">
+                <i class="fas fa-chart-bar"></i> Results
+            </a>
+
+            <a href="notice.html">
+                <i class="fas fa-bullhorn"></i> Notices
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-images"></i> Gallery
+            </a>
+        </div>
+
+        <!-- SERVICES -->
+        <div class="footer-column">
+            <h3>Services</h3>
+
+            <a href="admission.html">
+                <i class="fas fa-file-signature"></i> Online Admission
+            </a>
+
+            <a href="id-card.html">
+                <i class="fas fa-id-card"></i> Student ID Card
+            </a>
+
+            <a href="features.html">
+                <i class="fas fa-layer-group"></i> Features
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-users"></i> Our Teachers
+            </a>
+
+            <a href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Main Website</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

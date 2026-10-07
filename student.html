@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal | EduSmart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="edusmart-page student-page">
+
+    <!-- HEADER -->
+    <header class="school-header">
+
+        <div class="school-container">
+
+            <a href="index.html" class="school-logo">
+
+                <div class="school-logo-icon">
+                    ES
+                </div>
+
+                <div>
+                    <strong>EduSmart</strong>
+                    <span>Smart School System</span>
+                </div>
+
+            </a>
+
+
+            <nav class="school-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="features.html">
+                    Features
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="notice.html">
+                    Notices
+                </a>
+
+                <a href="result.html">
+                    Results
+                </a>
+
+                <a href="timetable.html">
+                    Timetable
+                </a>
+
+                <a href="student.html" class="active">
+                    Student Portal
+                </a>
+
+                <a href="admission.html">
+                    Admission
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="school-menu-button"
+                id="studentMenuButton"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- LOGIN / SEARCH AREA -->
+    <main>
+
+        <section class="student-login-section">
+
+            <div class="school-container">
+
+                <div class="student-login-layout">
+
+                    <!-- LEFT -->
+                    <div class="student-login-intro">
+
+                        <span class="school-eyebrow">
+                            STUDENT PORTAL
+                        </span>
+
+                        <h1>
+                            Your School.
+                            <span>Your Portal.</span>
+                        </h1>
+
+                        <p>
+                            Access your student information, results,
+                            attendance, timetable and school notices
+                            from one place.
+                        </p>
+
+
+                        <div class="student-login-features">
+
+                            <div class="student-login-feature">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Student Profile</strong>
+                                    <small>
+                                        View your registered information
+                                    </small>
+                                </div>
+                            </div>
+
+
+                            <div class="student-login-feature">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Academic Results</strong>
+                                    <small>
+                                        Check your academic performance
+                                    </small>
+                                </div>
+                            </div>
+
+
+                            <div class="student-login-feature">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Attendance</strong>
+                                    <small>
+                                        View your attendance record
+                                    </small>
+                                </div>
+                            </div>
+
+
+                            <div class="student-login-feature">
+                                <span>✓</span>
+                                <div>
+                                    <strong>Timetable & Notices</strong>
+                                    <small>
+                                        Stay updated with school activities
+                                    </small>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOGIN CARD -->
+                    <div class="student-login-card">
+
+                        <div class="student-login-card-heading">
+
+                            <div class="student-login-icon">
+                                🎓
+                            </div>
+
+                            <span class="school-eyebrow">
+                                SECURE ACCESS
+                            </span>
+
+                            <h2>
+                                Student Login
+                            </h2>
+
+                            <p>
+                                Enter your registered information
+                                to access your portal.
+                            </p>
+
+                        </div>
+
+
+                        <form id="studentLoginForm">
+
+                            <div class="school-form-group">
+
+                                <label for="portalStudentName">
+                                    Student Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="portalStudentName"
+                                    placeholder="Enter student name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="school-form-group">
+
+                                <label for="portalFatherName">
+                                    Father's Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="portalFatherName"
+                                    placeholder="Enter father's name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="school-form-group">
+
+                                <label for="portalPhone">
+                                    Registered Phone
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="portalPhone"
+                                    placeholder="03XX XXXXXXX"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div
+                                class="student-login-error"
+                                id="studentLoginError"
+                            ></div>
+
+
+                            <button
+                                type="submit"
+                                class="school-primary-button student-login-button"
+                            >
+                                Open Student Portal
+                            </button>
+
+                        </form>
+
+
+                        <div class="student-login-footer">
+
+                            <span>
+                                Don't have an admission?
+                            </span>
+
+                            <a href="admission.html">
+                                Apply for Admission
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTAL -->
+        <section
+            class="student-portal-section"
+            id="studentPortal"
+        >
+
+            <div class="school-container">
+
+                <!-- PORTAL TOP -->
+                <div class="student-portal-top">
+
+                    <div class="student-profile-heading">
+
+                        <div
+                            class="student-avatar"
+                            id="studentAvatar"
+                        >
+                            S
+                        </div>
+
+                        <div>
+
+                            <span class="school-eyebrow">
+                                STUDENT DASHBOARD
+                            </span>
+
+                            <h2 id="portalStudentHeading">
+                                Welcome, Student
+                            </h2>
+
+                            <p id="portalStudentMeta">
+                                Student information
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="school-outline-button"
+                        id="studentLogoutButton"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+
+                <!-- PORTAL NAV -->
+                <div class="student-portal-nav">
+
+                    <button
+                        type="button"
+                        class="student-portal-tab active"
+                        data-student-tab="profile"
+                    >
+                        Profile
+                    </button>
+
+                    <button
+                        type="button"
+                        class="student-portal-tab"
+                        data-student-tab="results"
+                    >
+                        Results
+                    </button>
+
+                    <button
+                        type="button"
+                        class="student-portal-tab"
+                        data-student-tab="attendance"
+                    >
+                        Attendance
+                    </button>
+
+                    <button
+                        type="button"
+                        class="student-portal-tab"
+                        data-student-tab="timetable"
+                    >
+                        Timetable
+                    </button>
+
+                    <button
+                        type="button"
+                        class="student-portal-tab"
+                        data-student-tab="notices"
+                    >
+                        Notices
+                    </button>
+
+                </div>
+
+
+                <!-- PROFILE -->
+                <div
+                    class="student-portal-panel active"
+                    id="studentTabProfile"
+                >
+
+                    <div class="student-panel-heading">
+
+                        <div>
+                            <span class="school-eyebrow">
+                                PERSONAL INFORMATION
+                            </span>
+
+                            <h3>
+                                Student Profile
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-profile-grid">
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Student Name
+                            </span>
+
+                            <strong id="profileStudentName">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Father's Name
+                            </span>
+
+                            <strong id="profileFatherName">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Class
+                            </span>
+
+                            <strong id="profileStudentClass">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Gender
+                            </span>
+
+                            <strong id="profileGender">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Date of Birth
+                            </span>
+
+                            <strong id="profileDob">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Phone
+                            </span>
+
+                            <strong id="profilePhone">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Application Number
+                            </span>
+
+                            <strong id="profileApplicationNumber">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card">
+
+                            <span>
+                                Admission Status
+                            </span>
+
+                            <strong
+                                class="student-status-badge"
+                                id="profileStatus"
+                            >
+                                Pending
+                            </strong>
+
+                        </div>
+
+
+                        <div class="student-info-card full-width">
+
+                            <span>
+                                Address
+                            </span>
+
+                            <strong id="profileAddress">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESULTS -->
+                <div
+                    class="student-portal-panel"
+                    id="studentTabResults"
+                >
+
+                    <div class="student-panel-heading">
+
+                        <div>
+                            <span class="school-eyebrow">
+                                ACADEMIC PERFORMANCE
+                            </span>
+
+                            <h3>
+                                My Results
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="student-results-summary"
+                        id="studentResultsSummary"
+                    >
+
+                        <div class="student-result-stat">
+                            <span>Subjects</span>
+                            <strong id="studentSubjectCount">0</strong>
+                        </div>
+
+                        <div class="student-result-stat">
+                            <span>Marks</span>
+                            <strong id="studentTotalMarks">0</strong>
+                        </div>
+
+                        <div class="student-result-stat">
+                            <span>Average</span>
+                            <strong id="studentAverageMarks">0%</strong>
+                        </div>
+
+                        <div class="student-result-stat">
+                            <span>Grade</span>
+                            <strong id="studentOverallGrade">—</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-table-card">
+
+                        <div class="student-table-wrapper">
+
+                            <table class="student-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Subject</th>
+                                        <th>Obtained</th>
+                                        <th>Total</th>
+                                        <th>Percentage</th>
+                                        <th>Grade</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody id="studentResultsBody">
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                        <div
+                            class="student-empty-state"
+                            id="studentResultsEmpty"
+                        >
+                            <div>📊</div>
+                            <h4>No Results Available</h4>
+                            <p>
+                                Your academic results will appear
+                                here when published by the school.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ATTENDANCE -->
+                <div
+                    class="student-portal-panel"
+                    id="studentTabAttendance"
+                >
+
+                    <div class="student-panel-heading">
+
+                        <div>
+                            <span class="school-eyebrow">
+                                ATTENDANCE RECORD
+                            </span>
+
+                            <h3>
+                                My Attendance
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-attendance-grid">
+
+                        <div class="student-attendance-card present">
+                            <span>Present</span>
+                            <strong id="studentPresentCount">0</strong>
+                        </div>
+
+                        <div class="student-attendance-card absent">
+                            <span>Absent</span>
+                            <strong id="studentAbsentCount">0</strong>
+                        </div>
+
+                        <div class="student-attendance-card late">
+                            <span>Late</span>
+                            <strong id="studentLateCount">0</strong>
+                        </div>
+
+                        <div class="student-attendance-card total">
+                            <span>Total Days</span>
+                            <strong id="studentAttendanceTotal">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="student-attendance-message">
+
+                        <div class="student-empty-icon">
+                            📅
+                        </div>
+
+                        <div>
+                            <h4>
+                                Attendance Information
+                            </h4>
+
+                            <p>
+                                Your daily attendance record is
+                                managed by the school administration.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TIMETABLE -->
+                <div
+                    class="student-portal-panel"
+                    id="studentTabTimetable"
+                >
+
+                    <div class="student-panel-heading">
+
+                        <div>
+                            <span class="school-eyebrow">
+                                CLASS SCHEDULE
+                            </span>
+
+                            <h3>
+                                My Timetable
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="student-timetable-grid"
+                        id="studentTimetableGrid"
+                    >
+                    </div>
+
+
+                    <div
+                        class="student-empty-state"
+                        id="studentTimetableEmpty"
+                    >
+                        <div>🗓️</div>
+
+                        <h4>
+                            Timetable Not Published
+                        </h4>
+
+                        <p>
+                            Your class timetable will appear here
+                            when published by the school.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- NOTICES -->
+                <div
+                    class="student-portal-panel"
+                    id="studentTabNotices"
+                >
+
+                    <div class="student-panel-heading">
+
+                        <div>
+                            <span class="school-eyebrow">
+                                SCHOOL UPDATES
+                            </span>
+
+                            <h3>
+                                Latest Notices
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="student-notices-list"
+                        id="studentNoticesList"
+                    >
+                    </div>
+
+
+                    <div
+                        class="student-empty-state"
+                        id="studentNoticesEmpty"
+                    >
+                        <div>🔔</div>
+
+                        <h4>
+                            No Notices
+                        </h4>
+
+                        <p>
+                            School notices and announcements will
+                            appear here.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+ <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                Home
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-book-open"></i>
+                Classes
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-chalkboard-teacher"></i>
+                Teachers
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-images"></i>
+                Gallery
+            </a>
+
+            <a href="features.html">
+                <i class="fas fa-layer-group"></i>
+                Features
+            </a>
+        </div>
+
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html">
+                <i class="fas fa-user-graduate"></i>
+                Student Portal
+            </a>
+
+            <a href="admission.html">
+                <i class="fas fa-file-signature"></i>
+                Online Admission
+            </a>
+
+            <a href="result.html">
+                <i class="fas fa-chart-line"></i>
+                Check Result
+            </a>
+
+            <a href="timetable.html">
+                <i class="fas fa-calendar-alt"></i>
+                Timetable
+            </a>
+
+            <a href="id-card.html">
+                <i class="fas fa-id-card"></i>
+                Student ID Card
+            </a>
+        </div>
+
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html">
+                <i class="fas fa-bullhorn"></i>
+                Notices
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-camera"></i>
+                School Gallery
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-users"></i>
+                Our Teachers
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-school"></i>
+                Academic Classes
+            </a>
+
+            <a href="admin.html">
+                <i class="fas fa-lock"></i>
+                Admin Panel
+            </a>
+        </div>
+
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+
+                <span>•</span>
+
+                <a href="student.html">Student Portal</a>
+
+                <span>•</span>
+
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

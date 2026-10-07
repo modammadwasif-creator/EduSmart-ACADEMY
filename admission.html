@@ -1,0 +1,961 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admission | EduSmart</title>
+
+    <meta
+        name="description"
+        content="Apply for admission at EduSmart Smart School System."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admission-page">
+
+    <!-- HEADER -->
+    <header class="site-header admission-header">
+
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="brand-text">
+                    <strong>EduSmart</strong>
+                    <span>Smart School System</span>
+                </div>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="admissionMenuButton"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <nav class="main-nav" id="admissionNav">
+
+                <a href="index.html">Home</a>
+
+                <a href="features.html">Features</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="notices.html">Notices</a>
+
+                <a href="results.html">Results</a>
+
+                <a href="timetable.html">Timetable</a>
+
+                <a href="student.html">Student Portal</a>
+
+                <a href="admission.html" class="nav-button active">
+                    Admission
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="admission-hero">
+
+        <div class="container">
+
+            <div class="admission-hero-content">
+
+                <span class="section-eyebrow">
+                    <i class="fa-solid fa-file-signature"></i>
+                    Admissions Open
+                </span>
+
+                <h1>
+                    Start Your
+                    <span>Academic Journey</span>
+                </h1>
+
+                <p>
+                    Complete the admission form below. Your application
+                    will be submitted to the EduSmart administration
+                    for review.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADMISSION MAIN -->
+    <main class="admission-main">
+
+        <div class="container">
+
+            <div class="admission-layout">
+
+                <!-- FORM -->
+                <section class="admission-form-card">
+
+                    <div class="admission-form-header">
+
+                        <div class="admission-form-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+
+                        <div>
+                            <h2>Student Admission Form</h2>
+
+                            <p>
+                                Please provide accurate information.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="admissionForm" novalidate>
+
+                        <!-- PERSONAL INFORMATION -->
+                        <div class="admission-form-section">
+
+                            <div class="admission-section-title">
+
+                                <span>01</span>
+
+                                <div>
+                                    <h3>Personal Information</h3>
+                                    <p>Basic student details</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-form-grid">
+
+                                <div class="admission-form-group full">
+
+                                    <label for="admissionStudentName">
+                                        Student Full Name
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-user"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionStudentName"
+                                            placeholder="Enter student's full name"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionFatherName">
+                                        Father's Name
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-user-tie"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionFatherName"
+                                            placeholder="Enter father's name"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionGender">
+                                        Gender
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-venus-mars"></i>
+
+                                        <select
+                                            id="admissionGender"
+                                            required
+                                        >
+                                            <option value="">
+                                                Select gender
+                                            </option>
+
+                                            <option value="Male">
+                                                Male
+                                            </option>
+
+                                            <option value="Female">
+                                                Female
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionDob">
+                                        Date of Birth
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-calendar"></i>
+
+                                        <input
+                                            type="date"
+                                            id="admissionDob"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionClass">
+                                        Applying For Class
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-school"></i>
+
+                                        <select
+                                            id="admissionClass"
+                                            required
+                                        >
+                                            <option value="">
+                                                Select class
+                                            </option>
+
+                                            <option value="Play Group">
+                                                Play Group
+                                            </option>
+
+                                            <option value="ECED I">
+                                                ECED I
+                                            </option>
+
+                                            <option value="ECED II">
+                                                ECED II
+                                            </option>
+
+                                            <option value="Class 1">
+                                                Class 1
+                                            </option>
+
+                                            <option value="Class 2">
+                                                Class 2
+                                            </option>
+
+                                            <option value="Class 3">
+                                                Class 3
+                                            </option>
+
+                                            <option value="Class 4">
+                                                Class 4
+                                            </option>
+
+                                            <option value="Class 5">
+                                                Class 5
+                                            </option>
+
+                                            <option value="Class 6">
+                                                Class 6
+                                            </option>
+
+                                            <option value="Class 7">
+                                                Class 7
+                                            </option>
+
+                                            <option value="Class 8">
+                                                Class 8
+                                            </option>
+
+                                            <option value="Class 9">
+                                                Class 9
+                                            </option>
+
+                                            <option value="Class 10">
+                                                Class 10
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CONTACT -->
+                        <div class="admission-form-section">
+
+                            <div class="admission-section-title">
+
+                                <span>02</span>
+
+                                <div>
+                                    <h3>Contact Information</h3>
+                                    <p>Parent or guardian contact details</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-form-grid">
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionPhone">
+                                        Phone Number
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-phone"></i>
+
+                                        <input
+                                            type="tel"
+                                            id="admissionPhone"
+                                            placeholder="03XX XXXXXXX"
+                                            required
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionEmail">
+                                        Email Address
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-envelope"></i>
+
+                                        <input
+                                            type="email"
+                                            id="admissionEmail"
+                                            placeholder="parent@example.com"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group full">
+
+                                    <label for="admissionAddress">
+                                        Complete Address
+                                        <span>*</span>
+                                    </label>
+
+                                    <div class="admission-input-wrap textarea-wrap">
+
+                                        <i class="fa-solid fa-location-dot"></i>
+
+                                        <textarea
+                                            id="admissionAddress"
+                                            rows="4"
+                                            placeholder="Enter complete residential address"
+                                            required
+                                        ></textarea>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PREVIOUS SCHOOL -->
+                        <div class="admission-form-section">
+
+                            <div class="admission-section-title">
+
+                                <span>03</span>
+
+                                <div>
+                                    <h3>Academic Information</h3>
+                                    <p>Previous school information</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-form-grid">
+
+                                <div class="admission-form-group full">
+
+                                    <label for="admissionPreviousSchool">
+                                        Previous School
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-building-columns"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionPreviousSchool"
+                                            placeholder="Enter previous school name"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionPreviousClass">
+                                        Previous Class
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-book"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionPreviousClass"
+                                            placeholder="e.g. Class 5"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionPreviousGrade">
+                                        Previous Grade / Result
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-chart-line"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionPreviousGrade"
+                                            placeholder="e.g. A Grade"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMERGENCY -->
+                        <div class="admission-form-section">
+
+                            <div class="admission-section-title">
+
+                                <span>04</span>
+
+                                <div>
+                                    <h3>Emergency Contact</h3>
+                                    <p>Contact person for emergencies</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-form-grid">
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionEmergencyName">
+                                        Emergency Contact Name
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-user-shield"></i>
+
+                                        <input
+                                            type="text"
+                                            id="admissionEmergencyName"
+                                            placeholder="Contact person name"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="admission-form-group">
+
+                                    <label for="admissionEmergencyPhone">
+                                        Emergency Phone
+                                    </label>
+
+                                    <div class="admission-input-wrap">
+
+                                        <i class="fa-solid fa-phone-volume"></i>
+
+                                        <input
+                                            type="tel"
+                                            id="admissionEmergencyPhone"
+                                            placeholder="03XX XXXXXXX"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- AGREEMENT -->
+                        <div class="admission-agreement">
+
+                            <label class="admission-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="admissionAgreement"
+                                    required
+                                >
+
+                                <span class="admission-checkmark"></span>
+
+                                <span>
+                                    I confirm that the information provided
+                                    in this application is accurate and
+                                    complete.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div
+                            class="admission-form-error"
+                            id="admissionFormError"
+                            aria-live="polite"
+                        ></div>
+
+
+                        <button
+                            type="submit"
+                            class="admission-submit-button"
+                        >
+                            <span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Submit Admission Application
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- SIDE INFO -->
+                <aside class="admission-info">
+
+                    <div class="admission-info-card">
+
+                        <div class="admission-info-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <h3>Simple Admission Process</h3>
+
+                        <p>
+                            Submit your details online and the school
+                            administration can review your application.
+                        </p>
+
+                        <div class="admission-steps">
+
+                            <div class="admission-step">
+
+                                <span>01</span>
+
+                                <div>
+                                    <strong>Fill Form</strong>
+                                    <small>
+                                        Enter student information
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-step">
+
+                                <span>02</span>
+
+                                <div>
+                                    <strong>Submit</strong>
+                                    <small>
+                                        Send your application
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-step">
+
+                                <span>03</span>
+
+                                <div>
+                                    <strong>Review</strong>
+                                    <small>
+                                        Admin reviews application
+                                    </small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="admission-step">
+
+                                <span>04</span>
+
+                                <div>
+                                    <strong>Student ID</strong>
+                                    <small>
+                                        Access student services
+                                    </small>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admission-contact-card">
+
+                        <div class="admission-contact-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+
+                        <h3>Need Help?</h3>
+
+                        <p>
+                            Contact the school administration for
+                            admission-related questions.
+                        </p>
+
+                        <a href="index.html#contact">
+                            Contact School
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- SUCCESS MODAL -->
+    <div
+        class="admission-success-modal"
+        id="admissionSuccessModal"
+        hidden
+    >
+
+        <div class="admission-success-overlay"></div>
+
+        <div class="admission-success-box">
+
+            <div class="admission-success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <span class="section-eyebrow">
+                Application Submitted
+            </span>
+
+            <h2>Admission Request Received!</h2>
+
+            <p>
+                Your admission application has been successfully
+                submitted. Please save your application number.
+            </p>
+
+            <div class="admission-application-number">
+
+                <span>Application Number</span>
+
+                <strong id="generatedApplicationNumber">
+                    —
+                </strong>
+
+            </div>
+
+            <p class="admission-success-note">
+                You can use your registered details to access the
+                Student Portal after your record is approved.
+            </p>
+
+            <div class="admission-success-actions">
+
+                <a
+                    href="student.html"
+                    class="admission-success-primary"
+                >
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Student Portal
+                </a>
+
+                <button
+                    type="button"
+                    id="closeAdmissionSuccess"
+                    class="admission-success-secondary"
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-book-open"></i> Classes
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-chalkboard-teacher"></i> Teachers
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-images"></i> Gallery
+            </a>
+
+            <a href="features.html">
+                <i class="fas fa-layer-group"></i> Features
+            </a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html">
+                <i class="fas fa-user-graduate"></i> Student Portal
+            </a>
+
+            <a href="admission.html">
+                <i class="fas fa-file-signature"></i> Online Admission
+            </a>
+
+            <a href="result.html">
+                <i class="fas fa-chart-line"></i> Check Result
+            </a>
+
+            <a href="timetable.html">
+                <i class="fas fa-calendar-alt"></i> Timetable
+            </a>
+
+            <a href="id-card.html">
+                <i class="fas fa-id-card"></i> Student ID Card
+            </a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html">
+                <i class="fas fa-bullhorn"></i> Notices
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-camera"></i> School Gallery
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-users"></i> Our Teachers
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-school"></i> Academic Classes
+            </a>
+
+            <a href="admin.html">
+                <i class="fas fa-lock"></i> Admin Panel
+            </a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

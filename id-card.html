@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student ID Card | EduSmart</title>
+
+    <meta
+        name="description"
+        content="Find and view your EduSmart student ID card."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="id-card-page">
+
+    <!-- HEADER -->
+    <header class="site-header id-card-header">
+
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand">
+                <div class="brand-logo">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="brand-text">
+                    <strong>EduSmart</strong>
+                    <span>Smart School System</span>
+                </div>
+            </a>
+
+            <button
+                class="mobile-menu-button"
+                id="idCardMenuButton"
+                type="button"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav" id="idCardNav">
+
+                <a href="index.html">Home</a>
+
+                <a href="features.html">Features</a>
+
+                <a href="gallery.html">Gallery</a>
+
+                <a href="notice.html">Notices</a>
+
+                <a href="result.html">Results</a>
+
+                <a href="timetable.html">Timetable</a>
+
+                <a href="student.html">Student Portal</a>
+
+                <a href="admission.html" class="nav-button">
+                    Admission
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="id-card-hero">
+
+        <div class="container">
+
+            <div class="id-card-hero-content">
+
+                <span class="section-eyebrow">
+                    <i class="fa-solid fa-id-card"></i>
+                    Student Services
+                </span>
+
+                <h1>
+                    Student <span>ID Card</span>
+                </h1>
+
+                <p>
+                    Enter your registered details below to find
+                    and view your EduSmart Student ID Card.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FIND ID CARD -->
+    <main class="id-card-main">
+
+        <div class="container">
+
+            <div class="id-card-layout">
+
+                <!-- SEARCH CARD -->
+                <section class="id-card-search-card">
+
+                    <div class="id-card-card-heading">
+
+                        <div class="id-card-heading-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+
+                        <div>
+                            <h2>Find Your ID Card</h2>
+                            <p>
+                                Use the same details registered with the school.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="idCardForm" novalidate>
+
+                        <div class="id-card-form-group">
+
+                            <label for="idStudentName">
+                                Student Name
+                            </label>
+
+                            <div class="id-card-input-wrap">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="idStudentName"
+                                    placeholder="Enter student name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="id-card-form-group">
+
+                            <label for="idFatherName">
+                                Father's Name
+                            </label>
+
+                            <div class="id-card-input-wrap">
+
+                                <i class="fa-solid fa-user-tie"></i>
+
+                                <input
+                                    type="text"
+                                    id="idFatherName"
+                                    placeholder="Enter father's name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="id-card-form-group">
+
+                            <label for="idPhone">
+                                Phone Number
+                            </label>
+
+                            <div class="id-card-input-wrap">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="idPhone"
+                                    placeholder="Enter registered phone"
+                                    autocomplete="tel"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <p
+                            class="id-card-error"
+                            id="idCardError"
+                            aria-live="polite"
+                        ></p>
+
+
+                        <button
+                            type="submit"
+                            class="id-card-submit-button"
+                        >
+                            <i class="fa-solid fa-id-card"></i>
+                            Find ID Card
+                        </button>
+
+                    </form>
+
+
+                    <div class="id-card-help">
+
+                        <i class="fa-solid fa-circle-info"></i>
+
+                        <p>
+                            Make sure your name, father's name and phone
+                            number match your admission record.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- RESULT -->
+                <section
+                    class="id-card-result-area"
+                    id="idCardResultArea"
+                    hidden
+                >
+
+                    <div class="id-card-result-heading">
+
+                        <div>
+                            <span class="section-eyebrow">
+                                Verified Student
+                            </span>
+
+                            <h2>Your Student ID Card</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="id-card-print-button"
+                            id="printIdCardButton"
+                        >
+                            <i class="fa-solid fa-print"></i>
+                            Print
+                        </button>
+
+                    </div>
+
+
+                    <!-- DIGITAL CARD -->
+                    <div class="digital-id-card" id="digitalIdCard">
+
+                        <div class="digital-id-card-top">
+
+                            <div class="digital-school-logo">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+
+                            <div class="digital-school-name">
+                                <strong>EDUSMART</strong>
+                                <span>SMART SCHOOL SYSTEM</span>
+                            </div>
+
+                            <div class="digital-card-label">
+                                STUDENT
+                            </div>
+
+                        </div>
+
+
+                        <div class="digital-id-card-body">
+
+                            <div class="digital-student-avatar" id="idStudentAvatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <div class="digital-student-info">
+
+                                <span class="digital-label">
+                                    STUDENT NAME
+                                </span>
+
+                                <h3 id="cardStudentName">
+                                    —
+                                </h3>
+
+                                <span class="digital-label">
+                                    FATHER'S NAME
+                                </span>
+
+                                <p id="cardFatherName">
+                                    —
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="digital-id-details">
+
+                            <div>
+                                <span>ID NUMBER</span>
+                                <strong id="cardStudentId">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>CLASS</span>
+                                <strong id="cardStudentClass">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>GENDER</span>
+                                <strong id="cardStudentGender">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>STATUS</span>
+                                <strong id="cardStudentStatus">
+                                    —
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="digital-id-card-bottom">
+
+                            <div>
+                                <span>PHONE</span>
+                                <strong id="cardStudentPhone">
+                                    —
+                                </strong>
+                            </div>
+
+                            <div class="digital-id-valid">
+                                <i class="fa-solid fa-circle-check"></i>
+                                VERIFIED
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="id-card-result-actions">
+
+                        <a
+                            href="student.html"
+                            class="id-card-secondary-button"
+                        >
+                            <i class="fa-solid fa-user-graduate"></i>
+                            Open Student Portal
+                        </a>
+
+                        <button
+                            type="button"
+                            class="id-card-reset-button"
+                            id="idCardResetButton"
+                        >
+                            <i class="fa-solid fa-rotate-left"></i>
+                            Search Again
+                        </button>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+ <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-book-open"></i> Classes
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-chalkboard-teacher"></i> Teachers
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-images"></i> Gallery
+            </a>
+
+            <a href="features.html">
+                <i class="fas fa-layer-group"></i> Features
+            </a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html">
+                <i class="fas fa-user-graduate"></i> Student Portal
+            </a>
+
+            <a href="admission.html">
+                <i class="fas fa-file-signature"></i> Online Admission
+            </a>
+
+            <a href="result.html">
+                <i class="fas fa-chart-line"></i> Check Result
+            </a>
+
+            <a href="timetable.html">
+                <i class="fas fa-calendar-alt"></i> Timetable
+            </a>
+
+            <a href="id-card.html">
+                <i class="fas fa-id-card"></i> Student ID Card
+            </a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html">
+                <i class="fas fa-bullhorn"></i> Notices
+            </a>
+
+            <a href="gallery.html">
+                <i class="fas fa-camera"></i> School Gallery
+            </a>
+
+            <a href="teachers.html">
+                <i class="fas fa-users"></i> Our Teachers
+            </a>
+
+            <a href="classes.html">
+                <i class="fas fa-school"></i> Academic Classes
+            </a>
+
+            <a href="admin.html">
+                <i class="fas fa-lock"></i> Admin Panel
+            </a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

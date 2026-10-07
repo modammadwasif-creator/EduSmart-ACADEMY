@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timetable | EduSmart</title>
+
+    <meta
+        name="description"
+        content="View EduSmart school class timetable."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="timetable-page" id="timetablePage">
+ 
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+    <div class="site-header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="site-logo">
+
+            <span class="site-logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+
+            <span>
+                <strong>EduSmart</strong>
+                <small>Smart School System</small>
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav" id="timetableNav">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="features.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Features
+            </a>
+
+            <a href="gallery.html">
+                <i class="fa-solid fa-images"></i>
+                Gallery
+            </a>
+
+            <a href="notices.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                Notices
+            </a>
+
+            <a href="results.html">
+                <i class="fa-solid fa-chart-column"></i>
+                Results
+            </a>
+
+            <a href="timetable.html" class="active">
+                <i class="fa-solid fa-calendar-days"></i>
+                Timetable
+            </a>
+
+            <a href="student.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Portal
+            </a>
+
+            <a href="admission.html" class="nav-admission">
+                <i class="fa-solid fa-file-pen"></i>
+                Admission
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+        <button
+            type="button"
+            class="mobile-menu-button"
+            id="timetableMenuButton"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+    <!-- ================= HERO ================= -->
+
+    <section class="timetable-hero">
+
+        <div class="timetable-hero-content">
+
+            <span class="timetable-eyebrow">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Weekly Class Schedule
+
+            </span>
+
+
+            <h1>
+                School
+                <span>Timetable</span>
+            </h1>
+
+
+            <p>
+                Select your class to view the latest weekly
+                timetable published by the school administration.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="timetable-main">
+
+
+        <!-- CLASS SELECTOR -->
+
+        <section class="timetable-selector-section">
+
+            <div class="timetable-section-heading">
+
+                <span class="timetable-small-label">
+                    SELECT CLASS
+                </span>
+
+                <h2>
+                    Find Your
+                    <span>Schedule</span>
+                </h2>
+
+                <p>
+                    Choose your class below to view its current
+                    weekly timetable.
+                </p>
+
+            </div>
+
+
+            <div class="timetable-selector-card">
+
+                <div class="timetable-selector-icon">
+
+                    <i class="fa-solid fa-school"></i>
+
+                </div>
+
+
+                <div class="timetable-selector-content">
+
+                    <label for="publicTimetableClass">
+                        Class
+                    </label>
+
+
+                    <div class="timetable-select-wrap">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <select id="publicTimetableClass">
+
+                            <option value="">
+                                Select your class
+                            </option>
+
+                            <option value="Play Group">
+                                Play Group
+                            </option>
+
+                            <option value="ECED I">
+                                ECED I
+                            </option>
+
+                            <option value="ECED II">
+                                ECED II
+                            </option>
+
+                            <option value="Class 1">
+                                Class 1
+                            </option>
+
+                            <option value="Class 2">
+                                Class 2
+                            </option>
+
+                            <option value="Class 3">
+                                Class 3
+                            </option>
+
+                            <option value="Class 4">
+                                Class 4
+                            </option>
+
+                            <option value="Class 5">
+                                Class 5
+                            </option>
+
+                            <option value="Class 6">
+                                Class 6
+                            </option>
+
+                            <option value="Class 7">
+                                Class 7
+                            </option>
+
+                            <option value="Class 8">
+                                Class 8
+                            </option>
+
+                            <option value="Class 9">
+                                Class 9
+                            </option>
+
+                            <option value="Class 10">
+                                Class 10
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <p>
+                        Timetable information is updated by
+                        the school administration.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIMETABLE OUTPUT -->
+
+        <section
+            class="public-timetable-output"
+            id="publicTimetableOutput"
+        >
+
+            <div class="public-timetable-empty">
+
+                <div class="public-timetable-empty-icon">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                </div>
+
+                <h3>
+                    Select a Class
+                </h3>
+
+                <p>
+                    Select your class above to view the weekly
+                    timetable.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMATION -->
+
+        <section class="timetable-info-section">
+
+            <div class="timetable-info-card">
+
+                <div class="timetable-info-icon">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Need your personal timetable?
+                    </h3>
+
+                    <p>
+                        Students can also access their timetable
+                        through the Student Portal after logging in.
+                    </p>
+
+
+                    <a href="student.html">
+
+                        Open Student Portal
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+ <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="classes.html"><i class="fas fa-book-open"></i> Classes</a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="features.html"><i class="fas fa-layer-group"></i> Features</a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html"><i class="fas fa-user-graduate"></i> Student Portal</a>
+            <a href="admission.html"><i class="fas fa-file-signature"></i> Online Admission</a>
+            <a href="result.html"><i class="fas fa-chart-line"></i> Check Result</a>
+            <a href="timetable.html"><i class="fas fa-calendar-alt"></i> Timetable</a>
+            <a href="id-card.html"><i class="fas fa-id-card"></i> Student ID Card</a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html"><i class="fas fa-bullhorn"></i> Notices</a>
+            <a href="gallery.html"><i class="fas fa-camera"></i> School Gallery</a>
+            <a href="teachers.html"><i class="fas fa-users"></i> Our Teachers</a>
+            <a href="classes.html"><i class="fas fa-school"></i> Academic Classes</a>
+            <a href="admin.html"><i class="fas fa-lock"></i> Admin Panel</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

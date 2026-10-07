@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Results | EduSmart</title>
+
+    <meta
+        name="description"
+        content="Check student examination results through EduSmart."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="result-page" id="resultPage">
+
+ 
+<!-- ================= HEADER ================= -->
+
+<header class="site-header">
+    <div class="site-header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="site-logo">
+
+            <span class="site-logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </span>
+
+            <span>
+                <strong>EduSmart</strong>
+                <small>Smart School System</small>
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+        <nav class="main-nav" id="resultNav">
+
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                Home
+            </a>
+
+            <a href="features.html">
+                <i class="fa-solid fa-layer-group"></i>
+                Features
+            </a>
+
+            <a href="gallery.html">
+                <i class="fa-solid fa-images"></i>
+                Gallery
+            </a>
+
+            <a href="notices.html">
+                <i class="fa-solid fa-bullhorn"></i>
+                Notices
+            </a>
+
+            <a href="result.html" class="active">
+                <i class="fa-solid fa-chart-column"></i>
+                Results
+            </a>
+
+            <a href="timetable.html">
+                <i class="fa-solid fa-calendar-days"></i>
+                Timetable
+            </a>
+
+            <a href="student.html">
+                <i class="fa-solid fa-user-graduate"></i>
+                Student Portal
+            </a>
+
+            <a href="admission.html" class="nav-admission">
+                <i class="fa-solid fa-file-pen"></i>
+                Admission
+            </a>
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+        <button
+            type="button"
+            class="mobile-menu-button"
+            id="resultMenuButton"
+            aria-label="Open menu"
+        >
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+</header>
+
+    <!-- ================= HERO ================= -->
+    <section class="result-hero">
+        <div class="result-hero-overlay"></div>
+
+        <div class="result-hero-content">
+
+            <span class="result-eyebrow">
+                <i class="fa-solid fa-chart-column"></i>
+                Academic Performance
+            </span>
+
+            <h1>
+                Student <span>Results</span>
+            </h1>
+
+            <p>
+                Check examination results quickly and securely using
+                your Student ID and student information.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- ================= RESULT SEARCH ================= -->
+    <main class="result-main">
+
+        <section class="result-search-section">
+
+            <div class="result-section-heading">
+                <span class="result-small-label">RESULT PORTAL</span>
+
+                <h2>
+                    Find Your <span>Result</span>
+                </h2>
+
+                <p>
+                    Enter your Student ID, student name and father name
+                    to view your published examination result.
+                </p>
+            </div>
+
+
+            <div class="result-search-card">
+
+                <div class="result-search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="result-search-content">
+
+                    <h3>Search Student Result</h3>
+
+                    <p>
+                        Please enter the information below exactly as
+                        registered with the school.
+                    </p>
+
+
+                    <form id="resultSearchForm" class="result-search-form">
+
+                        <div class="result-form-group">
+
+                            <label for="resultStudentId">
+                                Student ID
+                            </label>
+
+                            <div class="result-input-wrap">
+                                <i class="fa-solid fa-id-card"></i>
+
+                                <input
+                                    type="text"
+                                    id="resultStudentId"
+                                    placeholder="Example: EDU-1001"
+                                    autocomplete="off"
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="result-form-row">
+
+                            <div class="result-form-group">
+
+                                <label for="resultStudentName">
+                                    Student Name
+                                </label>
+
+                                <div class="result-input-wrap">
+                                    <i class="fa-solid fa-user"></i>
+
+                                    <input
+                                        type="text"
+                                        id="resultStudentName"
+                                        placeholder="Enter student name"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+
+                            <div class="result-form-group">
+
+                                <label for="resultFatherName">
+                                    Father Name
+                                </label>
+
+                                <div class="result-input-wrap">
+                                    <i class="fa-solid fa-user-tie"></i>
+
+                                    <input
+                                        type="text"
+                                        id="resultFatherName"
+                                        placeholder="Enter father name"
+                                        required
+                                    >
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="result-search-error"
+                            id="resultSearchError"
+                        ></div>
+
+
+                        <button
+                            type="submit"
+                            class="result-search-button"
+                        >
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Search Result
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT OUTPUT ================= -->
+        <section
+            class="result-output-section"
+            id="resultOutputSection"
+            style="display: none;"
+        >
+
+            <div class="result-output-header">
+
+                <div>
+                    <span class="result-small-label">
+                        PUBLISHED RESULT
+                    </span>
+
+                    <h2>
+                        Academic <span>Report</span>
+                    </h2>
+                </div>
+
+                <button
+                    type="button"
+                    class="result-print-button"
+                    id="resultPrintButton"
+                >
+                    <i class="fa-solid fa-print"></i>
+                    Print Result
+                </button>
+
+            </div>
+
+
+            <!-- Student Information -->
+            <div class="result-student-card">
+
+                <div class="result-student-avatar">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+
+                <div class="result-student-info">
+
+                    <h3 id="resultStudentDisplayName">
+                        Student Name
+                    </h3>
+
+                    <p id="resultStudentDisplayMeta">
+                        Student information
+                    </p>
+
+                </div>
+
+                <div class="result-status">
+                    <span>STATUS</span>
+                    <strong id="resultStatus">Published</strong>
+                </div>
+
+            </div>
+
+
+            <!-- Summary -->
+            <div class="result-summary-grid">
+
+                <div class="result-summary-card">
+                    <div class="result-summary-icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+
+                    <span>Subjects</span>
+
+                    <strong id="resultSubjectCount">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="result-summary-card">
+                    <div class="result-summary-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <span>Total Marks</span>
+
+                    <strong id="resultTotalMarks">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="result-summary-card">
+                    <div class="result-summary-icon">
+                        <i class="fa-solid fa-percent"></i>
+                    </div>
+
+                    <span>Percentage</span>
+
+                    <strong id="resultPercentage">
+                        0%
+                    </strong>
+                </div>
+
+
+                <div class="result-summary-card result-grade-card">
+                    <div class="result-summary-icon">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+
+                    <span>Grade</span>
+
+                    <strong id="resultOverallGrade">
+                        -
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- Subject Results -->
+            <div class="result-table-card">
+
+                <div class="result-table-header">
+
+                    <div>
+                        <span>SUBJECT PERFORMANCE</span>
+
+                        <h3>
+                            Examination Details
+                        </h3>
+                    </div>
+
+                    <div
+                        class="result-exam-name"
+                        id="resultExamName"
+                    >
+                        Examination
+                    </div>
+
+                </div>
+
+
+                <div class="result-table-wrapper">
+
+                    <table class="result-table">
+
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Subject</th>
+                                <th>Obtained Marks</th>
+                                <th>Total Marks</th>
+                                <th>Percentage</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="resultTableBody">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- Result Footer -->
+            <div class="result-report-footer">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <span>
+                        This result has been published by EduSmart
+                        School Administration.
+                    </span>
+                </div>
+
+                <span id="resultGeneratedDate">
+                    -
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EMPTY / INFO ================= -->
+        <section class="result-info-section">
+
+            <div class="result-info-card">
+
+                <div class="result-info-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                </div>
+
+                <div>
+
+                    <h3>Can't find your result?</h3>
+
+                    <p>
+                        Make sure your Student ID, student name and
+                        father name are correct. Only results published
+                        by the school administration are available here.
+                    </p>
+
+                    <a href="student.html">
+                        Open Student Portal
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+ <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="classes.html"><i class="fas fa-book-open"></i> Classes</a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="features.html"><i class="fas fa-layer-group"></i> Features</a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html"><i class="fas fa-user-graduate"></i> Student Portal</a>
+            <a href="admission.html"><i class="fas fa-file-signature"></i> Online Admission</a>
+            <a href="result.html"><i class="fas fa-chart-line"></i> Check Result</a>
+            <a href="timetable.html"><i class="fas fa-calendar-alt"></i> Timetable</a>
+            <a href="id-card.html"><i class="fas fa-id-card"></i> Student ID Card</a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html"><i class="fas fa-bullhorn"></i> Notices</a>
+            <a href="gallery.html"><i class="fas fa-camera"></i> School Gallery</a>
+            <a href="teachers.html"><i class="fas fa-users"></i> Our Teachers</a>
+            <a href="classes.html"><i class="fas fa-school"></i> Academic Classes</a>
+            <a href="admin.html"><i class="fas fa-lock"></i> Admin Panel</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">+92 300 7024050</a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

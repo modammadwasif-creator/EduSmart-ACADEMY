@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery | EduSmart</title>
+
+    <meta
+        name="description"
+        content="Explore EduSmart school campus, classrooms, activities and events."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gallery-page" id="galleryPage">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+        <div class="site-header-inner">
+
+            <a href="index.html" class="site-logo">
+                <span class="site-logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </span>
+
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School System</small>
+                </span>
+            </a>
+
+            <nav class="main-nav" id="galleryNav">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="features.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Features
+                </a>
+
+                <a href="gallery.html" class="active">
+                    <i class="fa-solid fa-images"></i>
+                    Gallery
+                </a>
+
+                <a href="notice.html">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    Notices
+                </a>
+
+                <a href="results.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Results
+                </a>
+
+                <a href="timetable.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Timetable
+                </a>
+
+                <a href="student.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Student Portal
+                </a>
+
+                <a href="admission.html" class="nav-admission">
+                    <i class="fa-solid fa-file-pen"></i>
+                    Admission
+                </a>
+
+            </nav>
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="galleryMenuButton"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="gallery-hero">
+
+        <div class="gallery-hero-content">
+
+            <span class="gallery-eyebrow">
+                <i class="fa-solid fa-camera"></i>
+                SCHOOL GALLERY
+            </span>
+
+            <h1>
+                Moments That
+                <span>Inspire</span>
+            </h1>
+
+            <p>
+                Explore memorable moments from our classrooms,
+                campus activities, events and student life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <main class="gallery-main">
+
+        <div class="gallery-heading">
+
+            <div>
+                <span class="section-label">
+                    OUR MEMORIES
+                </span>
+
+                <h2>
+                    Explore Our Gallery
+                </h2>
+            </div>
+
+            <p>
+                A glimpse into the learning, creativity and
+                activities that make EduSmart special.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="gallery-filters">
+
+            <button
+                type="button"
+                class="gallery-filter active"
+                data-gallery-filter="all"
+            >
+                All
+            </button>
+
+            <button
+                type="button"
+                class="gallery-filter"
+                data-gallery-filter="campus"
+            >
+                Campus
+            </button>
+
+            <button
+                type="button"
+                class="gallery-filter"
+                data-gallery-filter="classroom"
+            >
+                Classroom
+            </button>
+
+            <button
+                type="button"
+                class="gallery-filter"
+                data-gallery-filter="events"
+            >
+                Events
+            </button>
+
+            <button
+                type="button"
+                class="gallery-filter"
+                data-gallery-filter="activities"
+            >
+                Activities
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY GRID -->
+
+        <div class="gallery-grid" id="galleryGrid">
+
+            <article
+                class="gallery-item"
+                data-gallery-category="campus"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=85"
+                    alt="School campus"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Campus</span>
+                    <h3>Our School Campus</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Our School Campus"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="classroom"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Modern classroom"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Classroom</span>
+                    <h3>Modern Learning Environment</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Modern Learning Environment"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="activities"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1000&q=85"
+                    alt="Students learning"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Activities</span>
+                    <h3>Students Learning Together</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Students Learning Together"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="events"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=1000&h=700&fit=crop"
+                    alt="School event"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Events</span>
+                    <h3>School Event</h3>
+                        <button
+    type="button"
+    class="gallery-view-button"
+    data-gallery-image="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1600&q=90"
+    data-gallery-title="School Event"
+>
+    <i class="fa-solid fa-expand"></i>
+</button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="campus"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1000&q=85"
+                    alt="School building"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Campus</span>
+                    <h3>School Building</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="School Building"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="classroom"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1000&q=85"
+                    alt="Students in classroom"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Classroom</span>
+                    <h3>Interactive Classroom</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Interactive Classroom"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="activities"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=85"
+                    alt="Students activity"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Activities</span>
+                    <h3>Creative Student Activities</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Creative Student Activities"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+
+            <article
+                class="gallery-item"
+                data-gallery-category="events"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1000&q=85"
+                    alt="School celebration"
+                >
+
+                <div class="gallery-overlay">
+                    <span>Events</span>
+                    <h3>Special School Celebration</h3>
+
+                    <button
+                        type="button"
+                        class="gallery-view-button"
+                        data-gallery-image="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1600&q=90"
+                        data-gallery-title="Special School Celebration"
+                    >
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= LIGHTBOX ================= -->
+
+    <div
+        class="gallery-lightbox"
+        id="galleryLightbox"
+        aria-hidden="true"
+    >
+
+        <button
+            type="button"
+            class="gallery-lightbox-close"
+            id="galleryLightboxClose"
+            aria-label="Close image"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="gallery-lightbox-content">
+
+            <img
+                src=""
+                alt=""
+                id="galleryLightboxImage"
+            >
+
+            <div
+                class="gallery-lightbox-caption"
+                id="galleryLightboxCaption"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="classes.html"><i class="fas fa-book-open"></i> Classes</a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="features.html"><i class="fas fa-layer-group"></i> Features</a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html"><i class="fas fa-user-graduate"></i> Student Portal</a>
+            <a href="admission.html"><i class="fas fa-file-signature"></i> Online Admission</a>
+            <a href="result.html"><i class="fas fa-chart-line"></i> Check Result</a>
+            <a href="timetable.html"><i class="fas fa-calendar-alt"></i> Timetable</a>
+            <a href="id-card.html"><i class="fas fa-id-card"></i> Student ID Card</a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html"><i class="fas fa-bullhorn"></i> Notices</a>
+            <a href="gallery.html"><i class="fas fa-camera"></i> School Gallery</a>
+            <a href="teachers.html"><i class="fas fa-users"></i> Our Teachers</a>
+            <a href="classes.html"><i class="fas fa-school"></i> Academic Classes</a>
+            <a href="admin.html"><i class="fas fa-lock"></i> Admin Panel</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">+92 300 7024050</a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notices | EduSmart</title>
+
+    <meta
+        name="description"
+        content="Latest school notices, announcements and important updates from EduSmart."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="notice-page" id="noticePage">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="site-header">
+
+        <div class="site-header-inner">
+
+            <a href="index.html" class="site-logo">
+
+                <span class="site-logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </span>
+
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School System</small>
+                </span>
+
+            </a>
+
+
+            <nav class="main-nav" id="noticeNav">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="features.html">
+                    <i class="fa-solid fa-layer-group"></i>
+                    Features
+                </a>
+
+                <a href="gallery.html">
+                    <i class="fa-solid fa-images"></i>
+                    Gallery
+                </a>
+
+                <a href="notices.html" class="active">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    Notices
+                </a>
+
+                <a href="results.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Results
+                </a>
+
+                <a href="timetable.html">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Timetable
+                </a>
+
+                <a href="student.html">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Student Portal
+                </a>
+
+                <a href="admission.html" class="nav-admission">
+                    <i class="fa-solid fa-file-pen"></i>
+                    Admission
+                </a>
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="mobile-menu-button"
+                id="noticeMenuButton"
+                aria-label="Open menu"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="notice-hero">
+
+        <div class="notice-hero-content">
+
+            <span class="notice-eyebrow">
+                <i class="fa-solid fa-bullhorn"></i>
+                SCHOOL NOTICES
+            </span>
+
+            <h1>
+                Important
+                <span>Updates</span>
+            </h1>
+
+            <p>
+                Stay informed about school announcements,
+                events, examinations, holidays and important
+                student information.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="notice-main">
+
+        <div class="notice-heading">
+
+            <div>
+
+                <span class="section-label">
+                    LATEST INFORMATION
+                </span>
+
+                <h2>
+                    School Notices
+                </h2>
+
+            </div>
+
+            <p>
+                All important announcements are collected here
+                so students and parents can easily stay updated.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="notice-tools">
+
+            <div class="notice-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="noticeSearch"
+                    placeholder="Search notices..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select
+                id="noticeCategoryFilter"
+                class="notice-category-filter"
+            >
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="general">
+                    General
+                </option>
+
+                <option value="exam">
+                    Examination
+                </option>
+
+                <option value="event">
+                    Events
+                </option>
+
+                <option value="holiday">
+                    Holidays
+                </option>
+
+                <option value="admission">
+                    Admission
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- NOTICE LIST -->
+
+        <section
+            class="notice-list"
+            id="noticePublicList"
+        >
+
+            <!-- Notice 1 -->
+
+            <article
+                class="public-notice-card"
+                data-notice-category="exam"
+            >
+
+                <div class="public-notice-date">
+
+                    <strong>15</strong>
+                    <span>OCT</span>
+
+                </div>
+
+
+                <div class="public-notice-content">
+
+                    <div class="public-notice-meta">
+
+                        <span class="notice-tag exam">
+                            Examination
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            10:00 AM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Mid-Term Examination Schedule
+                    </h3>
+
+                    <p>
+                        Students are advised to check the
+                        examination schedule carefully and
+                        prepare according to their class timetable.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="notice-read-button"
+                        data-notice-title="Mid-Term Examination Schedule"
+                        data-notice-content="Students are advised to check the examination schedule carefully and prepare according to their class timetable."
+                    >
+                        Read More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Notice 2 -->
+
+            <article
+                class="public-notice-card"
+                data-notice-category="event"
+            >
+
+                <div class="public-notice-date">
+
+                    <strong>20</strong>
+                    <span>OCT</span>
+
+                </div>
+
+
+                <div class="public-notice-content">
+
+                    <div class="public-notice-meta">
+
+                        <span class="notice-tag event">
+                            Event
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            09:00 AM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Annual School Activity Day
+                    </h3>
+
+                    <p>
+                        Students will participate in educational,
+                        creative and recreational activities during
+                        the Annual School Activity Day.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="notice-read-button"
+                        data-notice-title="Annual School Activity Day"
+                        data-notice-content="Students will participate in educational, creative and recreational activities during the Annual School Activity Day."
+                    >
+                        Read More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Notice 3 -->
+
+            <article
+                class="public-notice-card"
+                data-notice-category="holiday"
+            >
+
+                <div class="public-notice-date">
+
+                    <strong>25</strong>
+                    <span>OCT</span>
+
+                </div>
+
+
+                <div class="public-notice-content">
+
+                    <div class="public-notice-meta">
+
+                        <span class="notice-tag holiday">
+                            Holiday
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            08:30 AM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        School Holiday Announcement
+                    </h3>
+
+                    <p>
+                        The school will remain closed on the
+                        announced holiday. Regular classes will
+                        resume according to the academic calendar.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="notice-read-button"
+                        data-notice-title="School Holiday Announcement"
+                        data-notice-content="The school will remain closed on the announced holiday. Regular classes will resume according to the academic calendar."
+                    >
+                        Read More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Notice 4 -->
+
+            <article
+                class="public-notice-card"
+                data-notice-category="admission"
+            >
+
+                <div class="public-notice-date">
+
+                    <strong>01</strong>
+                    <span>NOV</span>
+
+                </div>
+
+
+                <div class="public-notice-content">
+
+                    <div class="public-notice-meta">
+
+                        <span class="notice-tag admission">
+                            Admission
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            11:00 AM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        New Admission Applications Open
+                    </h3>
+
+                    <p>
+                        Admissions are now open for eligible
+                        students. Submit your application through
+                        the EduSmart online admission system.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="notice-read-button"
+                        data-notice-title="New Admission Applications Open"
+                        data-notice-content="Admissions are now open for eligible students. Submit your application through the EduSmart online admission system."
+                    >
+                        Read More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Notice 5 -->
+
+            <article
+                class="public-notice-card"
+                data-notice-category="general"
+            >
+
+                <div class="public-notice-date">
+
+                    <strong>05</strong>
+                    <span>NOV</span>
+
+                </div>
+
+
+                <div class="public-notice-content">
+
+                    <div class="public-notice-meta">
+
+                        <span class="notice-tag general">
+                            General
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-clock"></i>
+                            12:00 PM
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Parent-Teacher Meeting
+                    </h3>
+
+                    <p>
+                        Parents are requested to attend the
+                        scheduled Parent-Teacher Meeting to
+                        discuss student progress and development.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="notice-read-button"
+                        data-notice-title="Parent-Teacher Meeting"
+                        data-notice-content="Parents are requested to attend the scheduled Parent-Teacher Meeting to discuss student progress and development."
+                    >
+                        Read More
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- Dynamic notices from Admin -->
+
+        </section>
+
+
+        <!-- EMPTY -->
+
+        <div
+            class="notice-empty"
+            id="noticeEmpty"
+        >
+
+            <div class="notice-empty-icon">
+                <i class="fa-regular fa-folder-open"></i>
+            </div>
+
+            <h3>
+                No Notices Found
+            </h3>
+
+            <p>
+                Try another search or category.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= NOTICE MODAL ================= -->
+
+    <div
+        class="notice-modal"
+        id="noticeModal"
+        aria-hidden="true"
+    >
+
+        <div class="notice-modal-overlay"></div>
+
+        <div class="notice-modal-box">
+
+            <button
+                type="button"
+                class="notice-modal-close"
+                id="noticeModalClose"
+                aria-label="Close"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <span class="notice-modal-label">
+                SCHOOL NOTICE
+            </span>
+
+            <h2 id="noticeModalTitle">
+                Notice
+            </h2>
+
+            <p id="noticeModalContent">
+                Notice details.
+            </p>
+
+            <button
+                type="button"
+                class="notice-modal-button"
+                id="noticeModalButton"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+ 
+<footer class="site-footer">
+
+    <div class="footer-main">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+            <a href="index.html" class="footer-logo">
+                <span class="footer-logo-icon">E</span>
+                <span>
+                    <strong>EduSmart</strong>
+                    <small>Smart School Management</small>
+                </span>
+            </a>
+
+            <p>
+                A modern school management platform designed to connect
+                students, parents, teachers and school administration.
+            </p>
+
+            <div class="footer-badge">
+                <i class="fas fa-graduation-cap"></i>
+                Learn • Grow • Succeed
+            </div>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="classes.html"><i class="fas fa-book-open"></i> Classes</a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-teacher"></i> Teachers</a>
+            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+            <a href="features.html"><i class="fas fa-layer-group"></i> Features</a>
+        </div>
+
+        <!-- STUDENT SERVICES -->
+        <div class="footer-column">
+            <h3>Student Services</h3>
+
+            <a href="student.html"><i class="fas fa-user-graduate"></i> Student Portal</a>
+            <a href="admission.html"><i class="fas fa-file-signature"></i> Online Admission</a>
+            <a href="result.html"><i class="fas fa-chart-line"></i> Check Result</a>
+            <a href="timetable.html"><i class="fas fa-calendar-alt"></i> Timetable</a>
+            <a href="id-card.html"><i class="fas fa-id-card"></i> Student ID Card</a>
+        </div>
+
+        <!-- SCHOOL SERVICES -->
+        <div class="footer-column">
+            <h3>School Services</h3>
+
+            <a href="notice.html"><i class="fas fa-bullhorn"></i> Notices</a>
+            <a href="gallery.html"><i class="fas fa-camera"></i> School Gallery</a>
+            <a href="teachers.html"><i class="fas fa-users"></i> Our Teachers</a>
+            <a href="classes.html"><i class="fas fa-school"></i> Academic Classes</a>
+            <a href="admin.html"><i class="fas fa-lock"></i> Admin Panel</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Karachi, Pakistan</span>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+923007024050">
+                    +92 300 7024050
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:modammadwasif@gmail.com">
+                    modammadwasif@gmail.com
+                </a>
+            </div>
+
+            <div class="footer-contact-item">
+                <i class="fas fa-clock"></i>
+                <span>Mon - Sat: 8:00 AM - 2:00 PM</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER BOTTOM -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-inner">
+
+            <p>
+                © <span data-current-year>2026</span>
+                EduSmart. All Rights Reserved.
+            </p>
+
+            <div class="footer-bottom-links">
+                <a href="index.html">Home</a>
+                <span>•</span>
+                <a href="student.html">Student Portal</a>
+                <span>•</span>
+                <a href="admission.html">Admission</a>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
