@@ -1,4 +1,15 @@
- /* =========================================================
+
+const SUPABASE_URL = "https://opfrsrqujedfbqqzreuh.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_cT9zVLH3DL9zwX_up42tYA_OnGn0nbh";
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
+
+
+/* =========================================================
    EDUSMART - SINGLE JAVASCRIPT FILE
    Public Website + Admin Panel
 ========================================================= */
